@@ -36,32 +36,24 @@ public class SignListener implements Listener {
     @EventHandler
     public void onSignCreate(SignChangeEvent sign) {
         Player player = sign.getPlayer();
-        if (player.isOp() || player.hasPermission("plot_comprar")) {
-            if (sign.getLine(0).equalsIgnoreCase("[plot]")) {
-                if (sign.getLine(1) != null) {
-                    sign.setLine(0, "[Plot]");
-                    sign.setLine(2, sign.getLine(1));
-                    sign.setLine(1, "Buy a Plot");
-                    sign.setLine(3, "" + PlotList.PlotPrice);
-                    if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("pt")) {
-                        player.sendMessage(ChatColor.GREEN + "[Sucesso] Placa de venda de plot criada.");
-                    } else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("en")) {
-                        player.sendMessage(ChatColor.GREEN + "[Success] Buy Plot sign was created.");
-                    } else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("ger")) {
-                        player.sendMessage(ChatColor.GREEN + "[Erfolg] Kaufen Plot Zeichen erstellt wurde.");
-                    } else Files.LangError(player);
-                } else {
-                    sign.setLine(0, "[Plot]");
-                    sign.setLine(1, "Buy a Plot");
-                    sign.setLine(2, "Error");
-                    if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("pt")) {
-                        player.sendMessage(ChatColor.GREEN + "[Erro] Impossivel criar a placa.");
-                    } else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("en")) {
-                        player.sendMessage(ChatColor.GREEN + "[Error] Failed to create the sign.");
-                    } else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("ger")) {
-                        player.sendMessage(ChatColor.GREEN + "[Fehler] Kann Karte erstellen.");
-                    } else Files.LangError(player);
-                }
+        if (player.isOp() || player.hasPermission("plot_comprar") && sign.getLine(0).equalsIgnoreCase("[plot]")) {
+            if (sign.getLine(1) != null) {
+                sign.setLine(0, "[Plot]");
+                sign.setLine(2, sign.getLine(1));
+                sign.setLine(1, "Buy a Plot");
+                sign.setLine(3, "" + PlotList.PlotPrice);
+                if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("pt")) player.sendMessage(ChatColor.GREEN + "[Sucesso] Placa de venda de plot criada.");
+                else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("en")) player.sendMessage(ChatColor.GREEN + "[Success] Buy Plot sign was created.");
+                else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("ger")) player.sendMessage(ChatColor.GREEN + "[Erfolg] Kaufen Plot Zeichen erstellt wurde.");
+                else Files.LangError(player);
+            } else {
+                sign.setLine(0, "[Plot]");
+                sign.setLine(1, "Buy a Plot");
+                sign.setLine(2, "Error");
+                if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("pt")) player.sendMessage(ChatColor.GREEN + "[Erro] Impossivel criar a placa.");
+                else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("en")) player.sendMessage(ChatColor.GREEN + "[Error] Failed to create the sign.");
+                else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("ger")) player.sendMessage(ChatColor.GREEN + "[Fehler] Kann Karte erstellen.");
+                else Files.LangError(player);
             }
         }
     }

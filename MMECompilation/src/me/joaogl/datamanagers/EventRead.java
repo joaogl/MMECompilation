@@ -95,16 +95,6 @@ public class EventRead {
 	}
 
 	public static void test() {
-		if (ChatConf == null) {
-			ChatConf = new File(getDataFolder(), "Chat/Chat.yml");
-		}
-		ChatConfig = YamlConfiguration.loadConfiguration(ChatConf);
-		if (ChatConf == null || ChatConfig == null) {
-		}
-		try {
-			ChatConfig.save(ChatConf);
-		} catch (IOException e) {
-			System.out.println("ERROR SAVEING CHAT CONFIG");
-		}
+
 	}
 }

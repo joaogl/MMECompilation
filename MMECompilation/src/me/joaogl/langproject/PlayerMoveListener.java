@@ -27,7 +27,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class PlayerMoveListener implements Listener {
-
 	public static Main plugin;
 
 	public PlayerMoveListener(Main instance) {
