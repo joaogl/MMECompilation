@@ -1,0 +1,132 @@
+name: MMECompilation
+main: me.joaogl.compilation.Main
+version: 1.0
+description: Compilation of all MME plugins.
+commands:
+  ajuda:
+    description: Comando de ajuda.
+  estacionar:
+    description: Comando de ajuda.
+  tirar:
+    description: Comando de ajuda.
+  procurar:
+    description: Comando de ajuda.
+  entfernen:
+    description: Comando de ajuda.
+  suche:
+    description: Comando de ajuda.
+  help:
+    description: Comando de ajuda.
+  helfen:
+    description: Comando de ajuda.
+  creditos:
+    description: Comando de ajuda.
+  credits:
+    description: Comando de ajuda.
+  site:
+    description: Comando de ajuda.
+  website:
+    description: Comando de ajuda.
+  webseite:
+    description: Comando de ajuda.
+  sv:
+    description: Comando de ajuda.
+  server:
+    description: Comando de ajuda.
+  servidor:
+    description: Comando de ajuda.
+  servers:
+    description: Comando de ajuda.
+  mod:
+    description: Comando de ajuda.
+  modcomandos:
+    description: Comando de ajuda.
+  modcommands:
+    description: Comando de ajuda.
+  modbefehle:
+    description: Comando de ajuda.
+  vip:
+    description: Comando de ajuda.
+  vantagens:
+    description: Comando de ajuda.
+  advantages:
+    description: Comando de ajuda.
+  vorteile:
+    description: Comando de ajuda.
+  comandos:
+    description: Comando de ajuda.
+  commands:
+    description: Comando de ajuda.
+  befehle:
+    description: Comando de ajuda.
+  setlanguage:
+    description: Comando de ajuda.
+  language:
+    description: Comando de ajuda.
+  lingua:
+    description: Comando de ajuda.
+  defenirlingua:
+    description: Comando de ajuda.
+  sprache:
+    description: Comando de ajuda.
+  definierensprache:
+    description: Comando de ajuda.
+  park:
+    description: Comando de ajuda.
+  find:
+    description: Comando de ajuda.
+  unpark:
+    description: Comando de ajuda.
+  mme:
+    description: Comando de ajuda.
+  ajudaevento:
+    description: Lista de Ajuda para Admins.
+    permission: event.comandos
+  ae:
+    description: Lista de Ajuda para Admins abreviacao.
+  evento:
+    description: Descrever o evento.
+  e:
+    description: Descrever o evento abreviacao.
+  premio:
+    description: Devenir o premio.
+  lista:
+    description: Lista de Eventos.
+  p:
+    description: Devenir o premio abreviacao.
+  anuncio:
+    description: Anunciar Evento.
+  an:
+    description: Anunciar Evento abreviacao.
+  abrir:
+    description: Comando para abrir o evento.
+  ab:
+    description: Comando para abrir o evento abreviacao.
+  definir:
+    description: Comando para defenir o ponto do evento abreviacao.
+  de:
+    description: Comando para defenir o ponto do evento abreviacao.
+  ir:
+    description: To enter in the event.
+  go:
+    description: Comando de ir.
+  fechar:
+    description: Comando para fechar o evento.
+  fe:
+    description: Comando para fechar o evento abreviacao.
+  comecar:
+    description: Contagem decrescente.
+  c:
+    description: Contagem decrescente abreviacao.
+  vencedor:
+    description: Comando anunciar o vencedor.
+  ve:
+    description: Comando anunciar o vencedor abreviacao.
+  fim:
+    description: Comando apagar as variaveis e defenir o fim do evento.
+  regrasevento:
+    description: Comando para mostrar as Regras do servidor.
+  re:
+    description: Comando para mostrar as Regras do servidor.
+  step:
+    description: Comando para mostrar as Regras do servidor.
