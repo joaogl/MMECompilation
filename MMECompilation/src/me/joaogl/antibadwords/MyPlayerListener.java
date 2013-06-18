@@ -17,7 +17,9 @@
 
 package me.joaogl.antibadwords;
 
-import me.joaogl.compilation.Main;
+import java.util.ArrayList;
+import java.util.List;
+
 import me.joaogl.datamanagers.Files;
 import me.joaogl.datamanagers.IdManager;
 
@@ -26,18 +28,61 @@ import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerChatEvent;
+import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-@SuppressWarnings("deprecation")
 public class MyPlayerListener implements Listener {
-    public static Main plugin;
 
+    private List<String> words = new ArrayList<String>();
+    
+    public MyPlayerListener() {
+        this.words.add("fds"); 
+        this.words.add("fudido"); 
+        this.words.add("fodas"); 
+        this.words.add("foda"); 
+        this.words.add("fodass"); 
+        this.words.add("crlh"); 
+        this.words.add("caralho"); 
+        this.words.add("merda"); 
+        this.words.add("fuder"); 
+        this.words.add("puta"); 
+        this.words.add("fudida"); 
+        this.words.add("fdp"); 
+        this.words.add("pqp"); 
+        this.words.add("cabrao"); 
+        this.words.add("pariu"); 
+        this.words.add("fuck"); 
+        this.words.add("mother"); 
+        this.words.add("fucker"); 
+        this.words.add("fude"); 
+        this.words.add("viado"); 
+        this.words.add("arsch"); 
+        this.words.add("hure"); 
+        this.words.add("schlampe"); 
+        this.words.add("fick"); 
+        this.words.add("sack"); 
+        this.words.add("anal"); 
+        this.words.add("bastard"); 
+        this.words.add("nazi"); 
+        this.words.add("elk"); 
+        this.words.add("hengst"); 
+        this.words.add("hirsch"); 
+        this.words.add("honk"); 
+        this.words.add("zicke"); 
+        this.words.add("forzer"); 
+        this.words.add("fotze"); 
+        this.words.add("idiot"); 
+        this.words.add("nutte"); 
+        this.words.add("lesbe"); 
+        this.words.add("xylophondildo"); 
+        this.words.add("pavianarsch"); 
+        this.words.add("pisser");
+    }
+    
     @EventHandler
-    public void onPlayerChat(PlayerChatEvent event) {
+    public void onPlayerChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
-        if (!(player.hasPermission("dizer.asneiras") || player.isOp())) {
-            if (event.getMessage().toLowerCase().contains("fds") || event.getMessage().toLowerCase().contains("fudido") || event.getMessage().toLowerCase().contains("fodas") || event.getMessage().toLowerCase().contains("foda") || event.getMessage().toLowerCase().contains("fodass") || event.getMessage().toLowerCase().contains("crlh") || event.getMessage().toLowerCase().contains("caralho") || event.getMessage().toLowerCase().contains("merda") || event.getMessage().toLowerCase().contains("fuder") || event.getMessage().toLowerCase().contains("puta") || event.getMessage().toLowerCase().contains("fudida") || event.getMessage().toLowerCase().contains("fdp") || event.getMessage().toLowerCase().contains("pqp") || event.getMessage().toLowerCase().contains("cabrao") || event.getMessage().toLowerCase().contains("pariu") || event.getMessage().toLowerCase().contains("fuck") || event.getMessage().toLowerCase().contains("mother") || event.getMessage().toLowerCase().contains("fucker") || event.getMessage().toLowerCase().contains("fude") || event.getMessage().toLowerCase().contains("viado") || event.getMessage().toLowerCase().contains("Arsch") || event.getMessage().toLowerCase().contains("Hure") || event.getMessage().toLowerCase().contains("Schlampe") || event.getMessage().toLowerCase().contains("fick") || event.getMessage().toLowerCase().contains("Sack") || event.getMessage().toLowerCase().contains("Anal") || event.getMessage().toLowerCase().contains("Bastard") || event.getMessage().toLowerCase().contains("Nazi") || event.getMessage().toLowerCase().contains("Elk") || event.getMessage().toLowerCase().contains("Hengst") || event.getMessage().toLowerCase().contains("Hirsch") || event.getMessage().toLowerCase().contains("Honk") || event.getMessage().toLowerCase().contains("Zicke") || event.getMessage().toLowerCase().contains("Forzer") || event.getMessage().toLowerCase().contains("Fotze") || event.getMessage().toLowerCase().contains("Idiot") || event.getMessage().toLowerCase().contains("Nutte") || event.getMessage().toLowerCase().contains("Lesbe") || event.getMessage().toLowerCase().contains("Xylophondildo") || event.getMessage().toLowerCase().contains("Pavianarsch") || event.getMessage().toLowerCase().contains("Pisser")) {
-
+        if(!(player.hasPermission("dizer.asneiras") || player.isOp())) {
+            if(this.words.contains(event.getMessage())) {
                 event.setCancelled(true);
                 if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("pt")) player.kickPlayer("Essa e a paga pelo que disseste!");
                 else if (IdManager.getLang(IdManager.getId(player.getName())).equalsIgnoreCase("en")) player.kickPlayer("This is the pay for what you said!");
