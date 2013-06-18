@@ -25,9 +25,7 @@ import com.mysql.jdbc.Connection;
 public class DBConnection {
 
 	public static Connection conn = null;
-	// public static String url =
-	// "jdbc:mysql://localhost:13306/MineApp?user=MasterMineApp&password=52jahH6asd88Aloq69z";
-	public static String url = "jdbc:mysql://176.28.53.39:13306/MineApp?user=MasterMineApp&password=";
+	public static String url = "jdbc:mysql://localhost:13306/Mine?user=root&password=";
 	public static String xt;
 	public static Statement st;
 /*
